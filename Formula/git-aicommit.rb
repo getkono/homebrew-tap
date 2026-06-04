@@ -7,28 +7,28 @@
 class GitAicommit < Formula
   desc "Generate git commit messages from staged diffs using Claude"
   homepage "https://github.com/getkono/git-aicommit"
-  version "0.3.2"
+  version "0.3.3"
   license any_of: ["MIT", "Apache-2.0"]
 
   on_macos do
     on_arm do
       url "https://github.com/getkono/git-aicommit/releases/download/v#{version}/git-aicommit-aarch64-apple-darwin.tar.gz"
-      sha256 "3735e76e1909dae0632a91cd3c2e1947895c38d160f951814be000c4fdf8e6a0"
+      sha256 "318a7509596188a10eaed13125f5f1cd1b6a3ad6a88916ec7e587ae1456e9ec5"
     end
     on_intel do
       url "https://github.com/getkono/git-aicommit/releases/download/v#{version}/git-aicommit-x86_64-apple-darwin.tar.gz"
-      sha256 "5c563a08cf02446763a959146b26b817ba10abc39ab7200e33c65fc5ff63314f"
+      sha256 "af79a00877a958931a822e9f5edd69b336553888adaafcd4cd1ac3a601d7d0b5"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/getkono/git-aicommit/releases/download/v#{version}/git-aicommit-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "ecb22b9bee86716a8aa2d435a147b7fe96dda50f5b408c39c9b562145e8c364a"
+      sha256 "20fb425080770c98092ab52cd4d24a52715533e8acde83a173e7b8a7e801bd50"
     end
     on_intel do
       url "https://github.com/getkono/git-aicommit/releases/download/v#{version}/git-aicommit-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "0a0d6c074b1cd02bd33e72511051b8574a346563f27c0ead39a079c55ee156aa"
+      sha256 "fd9174a11dfa5ac1fc47ab8ae3136f0ceadd200f4ec56a4577456f9420a376c3"
     end
   end
 
@@ -39,7 +39,7 @@ class GitAicommit < Formula
   def caveats
     <<~EOS
       git-aicommit shells out to two tools this formula does NOT install:
-        * git >= 2.36   (brew install git, or use your system git)
+        * git           (brew install git, or use your system git)
         * claude        the Claude Code CLI, which is not available in Homebrew.
                         Install and authenticate it per:
                         https://docs.claude.com/en/docs/claude-code
