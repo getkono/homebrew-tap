@@ -16,10 +16,7 @@ brew install getkono/tap/git-aicommit
 
 ## Formulae
 
-| Formula | Description | Source |
-| --- | --- | --- |
-| `git-aicommit` | Generate git commit messages from staged diffs using Claude | [getkono/git-aicommit](https://github.com/getkono/git-aicommit) |
-| `tree-tui` | Interactive terminal UI for visualizing directories: code, size, and git stats | [getkono/tree-tui](https://github.com/getkono/tree-tui) |
+See [Formula](./Formula)
 
 ## Maintenance
 
