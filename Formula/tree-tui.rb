@@ -7,28 +7,28 @@
 class TreeTui < Formula
   desc "Interactive terminal UI for visualizing directories: code, size, and git stats"
   homepage "https://github.com/getkono/tree-tui"
-  version "0.1.2"
+  version "0.1.3"
   license any_of: ["MIT", "Apache-2.0"]
 
   on_macos do
     on_arm do
       url "https://github.com/getkono/tree-tui/releases/download/v#{version}/tree-tui-aarch64-apple-darwin.tar.gz"
-      sha256 "0ea5cc13683770314618655f77af0d4f1822cce6abe75645f5e5adf851b2070f"
+      sha256 "d516ea3af2ce3f897d00b161e6b6010017b32ce4cf095354190a3aee3490eb5f"
     end
     on_intel do
       url "https://github.com/getkono/tree-tui/releases/download/v#{version}/tree-tui-x86_64-apple-darwin.tar.gz"
-      sha256 "4270d0a9dbd8858060ad153e031e9ab4ec97c8b59314a377ca0249620172f570"
+      sha256 "f1799f7aac258094583f4e433b8430a5a54517e8ebb8bbd19eca5ea03aa13d47"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/getkono/tree-tui/releases/download/v#{version}/tree-tui-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "b892abed030341d26aa13037571622ba63a7fe51232154ca147d5e2ae3c483b6"
+      sha256 "40ca8ddcf13b554fc42dda05b6d073089230c6a84fdbefbccd8fc5b05de43eae"
     end
     on_intel do
       url "https://github.com/getkono/tree-tui/releases/download/v#{version}/tree-tui-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "ad0c6ca6ba34b8e484f600b8afdbb7e3b30770f717ea10681a271403169aa16e"
+      sha256 "43281cacf66124a40a7e61d706fb07728015debfa95f4516c509dc64cbb4f4b6"
     end
   end
 
