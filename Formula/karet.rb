@@ -7,28 +7,28 @@
 class Karet < Formula
   desc "VS Code-parity TUI code editor built from the karet-* toolkit"
   homepage "https://github.com/getkono/karet"
-  version "0.2.1"
+  version "0.2.2"
   license any_of: ["MIT", "Apache-2.0"]
 
   on_macos do
     on_arm do
       url "https://github.com/getkono/karet/releases/download/v#{version}/karet-aarch64-apple-darwin.tar.gz"
-      sha256 "1b44cce1ba26408f043054f914482fb6d835a1a3c6fb7eadac2862bd6c8f9004"
+      sha256 "9e7673ac393759f448d40b516667a3b2cf9c1203c0da4fbcceb745ccdb2137c1"
     end
     on_intel do
       url "https://github.com/getkono/karet/releases/download/v#{version}/karet-x86_64-apple-darwin.tar.gz"
-      sha256 "606df8444e59018aa10a4fea0afa8e65b81102fa4f88efee4345f62b1b894e9c"
+      sha256 "bed96e35928bd77d69943034e69be8892f5c924152994594467bcae3d58385a1"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/getkono/karet/releases/download/v#{version}/karet-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "a4fa1c8a4d518a4b66fc5508e96bb299f59b425d8f50fdbde9f10e3e412055d2"
+      sha256 "adfbf559b6d28375ad2d804feaf0f63639a195750b0379824cc822b141cb4cb0"
     end
     on_intel do
       url "https://github.com/getkono/karet/releases/download/v#{version}/karet-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "8b6326a3367c9e54d5067a62e3e4bc9a8a469d0323aa601bbe829ffd960f1598"
+      sha256 "474983c96841420d4c7f0f01ed7f72036eb92a4886fb44f3cc1843929289ac52"
     end
   end
 
