@@ -7,28 +7,28 @@
 class GitAicommit < Formula
   desc "Generate git commit messages from staged diffs using Claude"
   homepage "https://github.com/getkono/git-aicommit"
-  version "1.3.6"
+  version "1.4.0"
   license any_of: ["MIT", "Apache-2.0"]
 
   on_macos do
     on_arm do
       url "https://github.com/getkono/git-aicommit/releases/download/v#{version}/git-aicommit-aarch64-apple-darwin.tar.gz"
-      sha256 "bfa2659d864c278a02998a264cd82e64f8821ac0e08ca6e525dec7c61fac086a"
+      sha256 "15bacdddb49f8b69c4854d9d5ee73a99f4597b372e4d6f8ad23ef7ab2d01f732"
     end
     on_intel do
       url "https://github.com/getkono/git-aicommit/releases/download/v#{version}/git-aicommit-x86_64-apple-darwin.tar.gz"
-      sha256 "4cb007a3822bfcba286ff423a346ed846320404ed4ad2fc6db08652b8d58e994"
+      sha256 "e5c126de82a309373e7e2466f3994bf1b9666ecf662e800557db905d179d74b9"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/getkono/git-aicommit/releases/download/v#{version}/git-aicommit-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "03278e42273db062a8f635bc8ea95b0977d1b20adbd7b6f8fb4ee278e95b2fea"
+      sha256 "a1cfa07272cdc3b7c43fd7ce63463c56ff8434517d397d2c1644cb4696177c88"
     end
     on_intel do
       url "https://github.com/getkono/git-aicommit/releases/download/v#{version}/git-aicommit-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "74f946252c4eae8e585be053a975531cb123019be4199c39e12ea701a530aaa0"
+      sha256 "929a2752598a13a4f01ef80fd708da636b8f221a40ee6b120326c328f299a4b1"
     end
   end
 
