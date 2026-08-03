@@ -5,30 +5,30 @@
 #   ruby -c .github/homebrew/git-aicommit.rb
 #   brew style .github/homebrew/git-aicommit.rb
 class GitAicommit < Formula
-  desc "Generate git commit messages from staged diffs using Claude"
+  desc "Generate git commit messages using Codex or Claude"
   homepage "https://github.com/getkono/git-aicommit"
-  version "1.4.0"
+  version "1.5.0"
   license any_of: ["MIT", "Apache-2.0"]
 
   on_macos do
     on_arm do
       url "https://github.com/getkono/git-aicommit/releases/download/v#{version}/git-aicommit-aarch64-apple-darwin.tar.gz"
-      sha256 "15bacdddb49f8b69c4854d9d5ee73a99f4597b372e4d6f8ad23ef7ab2d01f732"
+      sha256 "b97601f044eec90e08cec31cbe2fd5800562ec22d91cfa3ed5800336af6919d2"
     end
     on_intel do
       url "https://github.com/getkono/git-aicommit/releases/download/v#{version}/git-aicommit-x86_64-apple-darwin.tar.gz"
-      sha256 "e5c126de82a309373e7e2466f3994bf1b9666ecf662e800557db905d179d74b9"
+      sha256 "1a7948faf1441948cd52fab2f9165d79f43c378cb95b3f441b65e886666e4856"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/getkono/git-aicommit/releases/download/v#{version}/git-aicommit-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "a1cfa07272cdc3b7c43fd7ce63463c56ff8434517d397d2c1644cb4696177c88"
+      sha256 "c11abd76804978e91a5e369a5f4b5af1525a267a396b56eb128c9464c1aa29c0"
     end
     on_intel do
       url "https://github.com/getkono/git-aicommit/releases/download/v#{version}/git-aicommit-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "929a2752598a13a4f01ef80fd708da636b8f221a40ee6b120326c328f299a4b1"
+      sha256 "cf8aba5e59a126304088216198f89557539fe5a8bdf45ca31dc835ef46113dd8"
     end
   end
 
@@ -38,11 +38,16 @@ class GitAicommit < Formula
 
   def caveats
     <<~EOS
-      git-aicommit shells out to two tools this formula does NOT install:
-        * git           (brew install git, or use your system git)
-        * claude        the Claude Code CLI, which is not available in Homebrew.
-                        Install and authenticate it per:
+      git-aicommit shells out to git and one supported agent CLI. This formula
+      does NOT install them:
+        * git           brew install git, or use your system git
+        * codex         install and authenticate OpenAI Codex:
+                        https://developers.openai.com/codex/cli/
+        * claude        install and authenticate Claude Code:
                         https://docs.claude.com/en/docs/claude-code
+
+      Only one agent CLI is required. When both are installed, Codex is used by
+      default; pass --agent claude to override it.
 
       Invoke it as a git subcommand once installed:  git aicommit
     EOS
