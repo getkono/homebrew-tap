@@ -7,28 +7,28 @@
 class Wt < Formula
   desc "Single-binary CLI + TUI for managing Git worktrees and their GitHub PRs"
   homepage "https://github.com/getkono/wt"
-  version "1.8.0"
+  version "1.8.1"
   license "MIT"
 
   on_macos do
     on_arm do
       url "https://github.com/getkono/wt/releases/download/v#{version}/wt-aarch64-apple-darwin.tar.gz"
-      sha256 "1ff873d98401c24fc8fd54fe8697dc8f011c516f143f867c22651ed16f7060ab"
+      sha256 "1a2cff34b189c46aae8b5282bfce1e14774d3a200e9f9c9897b1bcaf48974e1e"
     end
     on_intel do
       url "https://github.com/getkono/wt/releases/download/v#{version}/wt-x86_64-apple-darwin.tar.gz"
-      sha256 "ae312f9bf0309b8b673f0e7490e1d671408655d65b3828a38a547f05533a0f19"
+      sha256 "9236e49e95eb5b20f6b4da2a7469fc11751b3e2e5871a9095611863acc616010"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/getkono/wt/releases/download/v#{version}/wt-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "7de823f839bb128bd8ce47ca1e1ae6bd0d80ce2086300dda2ebcb404df3d9eac"
+      sha256 "003c9d25b46716825c2adb8ced39984d3043c6fab23eb26dba13ed096e27cf24"
     end
     on_intel do
       url "https://github.com/getkono/wt/releases/download/v#{version}/wt-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "cc258051c55ca2d8c1c6cbdc38806e4987394f4f24ff308785e552b44eb4d57b"
+      sha256 "943bba06dcd91aeaaee46157b89e3cbe2d2724d2a00d15cc9833967c97f7168a"
     end
   end
 
